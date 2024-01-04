@@ -1,0 +1,10 @@
+.new_style_my_name{
+    background-color: aqua;
+
+}
+.new_style_my_name button{
+    background-color: rgba(166, 174, 66, 0.244);
+    padding: 15px;
+    margin: 10px;
+    width: 100%;
+}
