@@ -20,7 +20,7 @@
 .login_user {
   width: 400px;
   height: 400px;
-  background-color: rgb(121, 129, 158);
+  background-color: lightblue;
   margin: auto;
   margin-top: 50px;
   box-shadow: 3px 6px 18px rgba(0, 0, 245, 0.947);
