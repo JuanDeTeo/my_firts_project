@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Button from "@/app/components/Button/Button";
 
 export default function Home() {
   return (
@@ -9,11 +10,11 @@ export default function Home() {
       <br />
 
       <section className={styles.form_menu}>
-        <button>game</button>
+        <Button>game</Button>
         <br />
-        <button>edit score</button>
+        <Button>edit score</Button>
         <br />
-        <button>logout</button>
+        <Button>logout</Button>
       </section>
 
       <div className={styles.links}>
