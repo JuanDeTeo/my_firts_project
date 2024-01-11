@@ -22,7 +22,7 @@ export default async function Home() {
           {user?.admin && <span>(Admin)</span>}
 
           {user?.Score.map((score) => (
-            <p>#{score.score}</p>
+            <p key={score.id}>#{score.score}</p>
           ))}
         </section>
         <section className={styles.score_user}>

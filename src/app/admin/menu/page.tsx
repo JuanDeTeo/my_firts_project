@@ -22,7 +22,7 @@ export default async function Home() {
         <br />
 
         {scores?.map((score) => (
-          <p>
+          <p key={score.id}>
             #{score.userId}:{score.score}
             <Button scoreId={score.id}>Delete score</Button>
           </p>
