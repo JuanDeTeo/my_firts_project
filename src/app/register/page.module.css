@@ -1,27 +1,19 @@
-.new_style_my_name {
+.login {
   background-color: rgb(153, 167, 175);
   height: 100vh;
   left: 50%;
 }
-.new_style_my_name button {
-  background-color: rgba(220, 220, 93, 0.494);
-  padding: 15px;
-  margin: 10px;
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-}
 
-.new_style_my_name h1 {
+.login h1 {
   text-align: center;
   left: 50%;
 }
-
-.new_style_my_name h3 {
+.login p {
+  margin-top: 50px;
   text-align: center;
-  left: 50%;
 }
-.form_menu {
+
+.form_login {
   width: 400px;
   height: 400px;
   background-color: rgb(121, 129, 158);
@@ -32,11 +24,13 @@
   border: 4px solid rgba(81, 81, 237, 0.294);
   color: bisque;
 }
-
-.links {
-  position: fixed;
-  top: 10px;
-  left: 70%;
-  padding: 10px;
-  color: rgb(245, 239, 88);
+.input_login {
+  text-align: center;
+  margin-top: 20px;
+}
+.inputs {
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+  border: 1px solid rgb(0, 0, 0);
 }

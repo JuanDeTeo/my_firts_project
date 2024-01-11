@@ -1,27 +1,15 @@
-.new_style_my_name {
+.game {
   background-color: rgb(153, 167, 175);
   height: 100vh;
   left: 50%;
 }
-.new_style_my_name button {
-  background-color: rgba(220, 220, 93, 0.494);
-  padding: 15px;
-  margin: 10px;
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-}
 
-.new_style_my_name h1 {
+.game h1 {
   text-align: center;
   left: 50%;
 }
 
-.new_style_my_name h3 {
-  text-align: center;
-  left: 50%;
-}
-.form_menu {
+.form_game {
   width: 400px;
   height: 400px;
   background-color: rgb(121, 129, 158);
@@ -39,4 +27,9 @@
   left: 70%;
   padding: 10px;
   color: rgb(245, 239, 88);
+}
+
+.score_game {
+  text-align: center;
+  margin-top: 50px;
 }
