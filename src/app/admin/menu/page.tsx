@@ -34,9 +34,7 @@ export default async function Home() {
 
       <div className={styles.links}>
         <p>
-          <a href="/login">Login</a>
-          <br />
-          <a href="/register">Register</a>
+          <a href="/profile">Profile</a>
         </p>
       </div>
     </main>

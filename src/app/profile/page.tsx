@@ -16,7 +16,6 @@ export default async function Home() {
       <br />
 
       <section className={styles.form_profile}>
-        <h1>HOLA</h1>
         <section className={styles.info_user}>
           <h2>{user?.fullname} </h2>
           {user?.admin && <span>(Admin)</span>}
@@ -24,9 +23,6 @@ export default async function Home() {
           {user?.Score.map((score) => (
             <p key={score.id}>#{score.score}</p>
           ))}
-        </section>
-        <section className={styles.score_user}>
-          <h2>score</h2>
         </section>
       </section>
 
