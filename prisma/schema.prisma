@@ -16,6 +16,7 @@ model User {
   fullname String
   Score    Score[]
   password String  @default("password1234")
+  admin    Boolean @default(false)
 }
 
 model Score {

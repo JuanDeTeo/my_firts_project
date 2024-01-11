@@ -17,7 +17,9 @@ export default function Home() {
       <br />
       {isUserLoggedIn && (
         <section className={styles.form_menu}>
-          <Button>game</Button>
+          <a href="/game">
+            <Button>game</Button>
+          </a>
           <br />
           <Suspense>
             <Button onClick={logout}>logout</Button>

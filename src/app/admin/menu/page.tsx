@@ -1,8 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "@/app/components/Button/Button";
+import { PrismaClient } from "@prisma/client";
+import { deleteScore, logout } from "@/app/actions/userActions";
+import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home() {
+  const prisma = new PrismaClient();
+  const scores = await prisma.score.findMany();
+  console.log({ scores });
   return (
     <main className={styles.new_style_my_name}>
       <h1>Menu</h1>
@@ -10,11 +16,20 @@ export default function Home() {
       <br />
 
       <section className={styles.form_menu}>
-        <Button>game</Button>
+        <a href="/game">
+          <Button>Game</Button>
+        </a>
         <br />
-        <Button>edit score</Button>
+
+        {scores?.map((score) => (
+          <p>
+            #{score.userId}:{score.score}
+            <Button scoreId={score.id}>Delete score</Button>
+          </p>
+        ))}
+
         <br />
-        <Button>logout</Button>
+        <Button onClick={logout}>logout</Button>
       </section>
 
       <div className={styles.links}>

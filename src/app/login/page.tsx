@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import Button from "@/app/components/Button/Button";
 import { login } from "../actions/userActions";
 import { useRouter } from "next/navigation";
+import { cookies } from "next/headers";
+import { PrismaClient } from "@prisma/client";
 
 export default function Home() {
   const router = useRouter();
@@ -11,13 +13,18 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onLogin = async () => {
+  const onLogin = () => {
     !pending &&
       startTransition(async () => {
-        const userId = await login({ email, password });
-        if (userId > -1) {
+        const user = await login({ email, password });
+        if (user.user) {
           console.log("Exito");
-          router.push("/menu");
+
+          if (user.user.admin == true) {
+            router.push("admin/menu");
+          } else {
+            router.push("/menu");
+          }
         } else {
           console.log("Error");
         }
